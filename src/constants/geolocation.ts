@@ -13,4 +13,10 @@ export const initialState: GeolocationPosition = {
     timestamp: 0,
 };
 
+export const GEOLOCATION_API_OPTIONS = {
+    maximumAge: 30 * 60 * 1000, // 30 minutes in miliseconds
+    timeout: Infinity,
+    enableHighAccuracy: false,
+};
+
 export const GeolocationContext = createContext(initialState);

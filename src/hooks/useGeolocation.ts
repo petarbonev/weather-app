@@ -5,7 +5,7 @@ import {
     GEOLOCATION_PERMISSION_DENIED,
     GEOLOCATION_POSITION_UNAVAILABLE
 } from '../constants/errors';
-import { initialState } from '../constants/geolocation';
+import { GEOLOCATION_API_OPTIONS, initialState } from '../constants/geolocation';
 
 const useGeolocation = () => {
     const [geolocation, setGeolocation] = useState(initialState);
@@ -38,7 +38,7 @@ const useGeolocation = () => {
         const geolocationAPI = navigator.geolocation;
 
         if (!!geolocationAPI) {
-            geolocationAPI.getCurrentPosition(onSuccessCallback, onErrorCallback);
+            geolocationAPI.getCurrentPosition(onSuccessCallback, onErrorCallback, GEOLOCATION_API_OPTIONS);
         } else {
             setError(BROWSER_NOT_SUPPORTED);
             setLoading(false);
