@@ -5,19 +5,7 @@ import {
     GEOLOCATION_PERMISSION_DENIED,
     GEOLOCATION_POSITION_UNAVAILABLE
 } from '../constants/errors';
-
-const initialState: GeolocationPosition = {
-    coords: {
-        accuracy: 0,
-        altitude: null,
-        altitudeAccuracy: null,
-        heading: null,
-        latitude: 0,
-        longitude: 0,
-        speed: null,
-    },
-    timestamp: 0,
-};
+import { initialState } from '../constants/geolocation';
 
 const useGeolocation = () => {
     const [geolocation, setGeolocation] = useState(initialState);
