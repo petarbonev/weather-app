@@ -4,6 +4,7 @@ import { GeolocationContext } from './constants/geolocation';
 import useGeolocation from './hooks/useGeolocation';
 import Loader from './components/common/Loader/Loader';
 import GeolocationError from './components/geolocation/GeolocationError/GeolocationError';
+import Router from './components/app/Router/Router';
 import styles from './App.module.css';
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
                 {cond([
                     [() => loading, () => <Loader />],
                     [() => !!error, () => <GeolocationError error={error} />],
-                    [T, () => null],
+                    [T, () => <Router />],
                 ])()}
             </div>
         </GeolocationContext.Provider>
