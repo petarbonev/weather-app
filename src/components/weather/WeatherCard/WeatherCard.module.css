@@ -1,0 +1,50 @@
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 25rem;
+    padding: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    background: var(--background-1);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.weather-card:last-of-type {
+    margin-right: 0;
+}
+
+.weather-card .heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.weather-card .subheading {
+    font-size: 0.9rem;
+    color: var(--color-2);
+}
+
+.weather-card .icon {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: auto;
+    border-radius: 100%;
+    background: var(--color-3);
+}
+
+.weather-card .values-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.weather-card .values-container .label {
+    font-size: 1rem;
+    color: var(--color-2);
+    margin-bottom: 0.2rem;
+}
+
+.weather-card .values-container .value {
+    font-size: 1.6rem;
+}
