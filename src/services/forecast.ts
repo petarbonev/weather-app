@@ -4,7 +4,7 @@ import { Endpoints } from './services.types';
 const endpoints: Endpoints = {
     getWeatherForecast: {
         method: 'GET',
-        urlFunction: ({ lat, lon, apiKey }) => `${API_BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`,
+        urlFunction: ({ lat, lon, unit, apiKey }) => `${API_BASE_URL}/forecast?lat=${lat}&lon=${lon}&units=${unit}&appid=${apiKey}`,
     }
 };
 

@@ -5,3 +5,51 @@
     justify-content: center;
     flex: 1;
 }
+
+.weather-dashboard .metric-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 4rem;
+    border-radius: 0.7rem;
+    background: var(--background-1);
+}
+
+.weather-dashboard .metric-switch::before {
+    content: '';
+    width: 1.6rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    background: var(--color-2);
+    transition: transform 0.5s ease;
+}
+
+.weather-dashboard .metric-switch.metric::before {
+    transform: translate(0);
+}
+
+.weather-dashboard .metric-switch.imperial::before {
+    transform: translate(calc(100% + 0.4rem));
+}
+
+.weather-dashboard .metric-switch .separator {
+    height: 2rem;
+    width: 0.1rem;
+    margin: 0 0.2rem;
+    background: var(--color-black);
+}
+
+.weather-dashboard .metric-switch button {
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.weather-dashboard .metric-switch.metric .celsius,
+.weather-dashboard .metric-switch.imperial .farenheit {
+    color: var(--background-1);
+    transition: color 0.5s ease;
+}

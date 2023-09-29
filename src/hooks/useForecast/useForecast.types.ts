@@ -38,6 +38,8 @@ export type RawForecastData = {
     dt_txt: string
 };
 
+export type ForecastMetric = 'metric' | 'imperial';
+
 export type ForecastData = RawForecastData & {
     id: string;
 }
