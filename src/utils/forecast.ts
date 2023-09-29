@@ -1,6 +1,7 @@
 import moment from 'moment';
-import { ForecastState, RawForecastData } from './../hooks/useForecast/useForecast.types';
+import { ForecastMetric, ForecastState, RawForecastData } from './../hooks/useForecast/useForecast.types';
 import { FORECAST_DATE_FORMAT } from '../constants/forecast';
+import { getKey } from '../i18n';
 
 export const buildForecastState = (data: RawForecastData[]) =>
     data.reduce((accum: ForecastState, item) => {
@@ -14,3 +15,9 @@ export const buildForecastState = (data: RawForecastData[]) =>
 
         return accum;
     }, { ids: [], byId: {} });
+
+export const formatTemperature = (value: number, metric: ForecastMetric) => {
+    const sign = getKey(`sign.${metric === 'metric' ? 'celsius' : 'farenheit'}`);
+
+    return `${Math.round(value)} ${sign}`;
+};
