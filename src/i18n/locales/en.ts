@@ -6,6 +6,9 @@ export default {
     'error.GeolocationPositionUnavailable': 'Sorry! Currently we are unable to provide a weather information about your location!',
     'label.min-temp': 'Min Temp',
     'label.max-temp': 'Max Temp',
+    'label.temp': 'Temp',
+    'label.feels': 'Feels',
+    'label.humidity': 'Humidity',
     'sign.celsius': '°C',
     'sign.farenheit': '°F',
 };

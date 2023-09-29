@@ -11,3 +11,5 @@ export const FORECAST_DATE_FORMAT = 'YYYY-MM-DD';
 export const FORECAST_MAX_VISIBLE_ITEMS = 5;
 export const FORECAST_METRIC_LS_KEY = 'forecast-metric';
 export const INITIAL_FORECAST_METRIC = (storage.getItem(FORECAST_METRIC_LS_KEY) || 'metric') as ForecastMetric;
+export const DAY_FORMAT = 'dddd';
+export const DATE_FORMAT = 'MMM Do YYYY';

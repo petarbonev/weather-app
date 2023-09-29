@@ -1,18 +1,17 @@
 import React, { FC, memo, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import { WeatherCardProps } from './WeatherCard.types';
 import { WeatherMetricsContextType } from '../WeatherMetricsProvider/WeatherMetricsProvider.types';
-import { ForecastContext, WeatherMetricsContext } from '../../../constants/forecast';
+import { DATE_FORMAT, DAY_FORMAT, ForecastContext, WeatherMetricsContext } from '../../../constants/forecast';
 import { WEATHER_ICONS_BASE_URL } from '../../../constants/common';
 import { getKey } from '../../../i18n';
 import { formatTemperature } from '../../../utils/forecast';
 import styles from './WeatherCard.module.css';
 
-const DAY_FORMAT = 'dddd';
-const DATE_FORMAT = 'MMM Do YYYY';
-
 const WeatherCard: FC<WeatherCardProps> = props => {
     const { id } = props;
+    const navigate = useNavigate();
     const { byId } = useContext(ForecastContext);
     const { value: metric } = useContext(WeatherMetricsContext) as WeatherMetricsContextType;
     const data = byId[id];
@@ -21,7 +20,7 @@ const WeatherCard: FC<WeatherCardProps> = props => {
     const date = moment(dt_txt);
 
     return (
-        <div className={styles['weather-card']}>
+        <div className={styles['weather-card']} onClick={() => navigate(`weather-details/${id}`)}>
             <div className={styles['heading']}>
                 {date.format(DAY_FORMAT)}
             </div>

@@ -1,0 +1,26 @@
+.weather-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.weather-details-container .weather-details-heading {
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.weather-details-container .weather-details-subheading {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.weather-details-container .weather-details {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 1rem;
+    background: var(--background-1);
+    border-radius: 1rem;
+}

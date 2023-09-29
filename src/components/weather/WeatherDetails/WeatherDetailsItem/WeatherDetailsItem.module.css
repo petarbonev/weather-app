@@ -1,0 +1,50 @@
+.weather-details-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 3rem;
+    max-width: 7rem;
+}
+
+.weather-details-item:last-of-type {
+    margin-right: 0;
+}
+
+.weather-details-item .time {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.weather-details-item .icon {
+    width: 6rem;
+    margin-top: 1.5rem;
+}
+
+.weather-details-item .description {
+    text-align: center;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.weather-details-item .row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+
+.weather-details-item .row .label {
+    color: var(--color-2);
+    margin-right: 0.3rem;
+}
+
+.weather-details-item .row .value {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.weather-details-item .row:last-of-type {
+    margin-bottom: 0;
+}
