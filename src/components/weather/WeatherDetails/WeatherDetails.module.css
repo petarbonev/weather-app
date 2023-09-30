@@ -8,6 +8,7 @@
 
 .weather-details-container .weather-details-heading {
     font-size: 3rem;
+    color: var(--color-1);
     font-style: italic;
     margin-bottom: 1rem;
 }
@@ -15,12 +16,21 @@
 .weather-details-container .weather-details-subheading {
     font-size: 2rem;
     margin-bottom: 4rem;
+    color: var(--color-2);
 }
 
 .weather-details-container .weather-details {
     display: flex;
     flex-direction: row;
-    padding: 2rem 1rem;
+    padding: 2.5rem 2rem;
     background: var(--background-1);
+    border: 0.1rem solid var(--stroke-2);
     border-radius: 1rem;
+    box-shadow:
+    var(--color-light-violet) 0px 1px 2px,
+    var(--color-light-violet) 0px 2px 4px,
+    var(--color-light-violet) 0px 4px 8px,
+    var(--color-light-violet) 0px 8px 16px,
+    var(--color-light-violet) 0px 16px 32px,
+    var(--color-light-violet) 0px 32px 64px;
 }

@@ -1,14 +1,23 @@
 .weather-card {
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    align-items: center;
+    box-sizing: border-box;
+    width: 14rem;
     height: 25rem;
     padding: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 3rem;
     margin-bottom: 2rem;
+    border: 0.1rem solid var(--stroke-2);
     border-radius: 1rem;
     background: var(--background-1);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow:
+        var(--color-light-violet) 0px 1px 2px,
+        var(--color-light-violet) 0px 2px 4px,
+        var(--color-light-violet) 0px 4px 8px,
+        var(--color-light-violet) 0px 8px 16px,
+        var(--color-light-violet) 0px 16px 32px,
+        var(--color-light-violet) 0px 32px 64px;
     transition: transform .2s ease;
     cursor: pointer;
 }
@@ -23,34 +32,42 @@
 
 .weather-card .heading {
     font-size: 2rem;
+    color: var(--color-1);
     margin-bottom: 0.5rem;
 }
 
 .weather-card .subheading {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: var(--color-2);
 }
 
 .weather-card .icon {
-    width: 7.5rem;
-    height: 7.5rem;
-    margin: auto;
-    border-radius: 100%;
-    background: var(--color-3);
+    width: 8rem;
+    height: 8rem;
+    margin: 1rem 0;
+}
+
+.weather-card .description {
+    font-size: 1.6rem;
+    margin-bottom: 3.5rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: auto;
 }
 
 .weather-card .values-container {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .weather-card .values-container .label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-2);
     margin-bottom: 0.2rem;
 }
 
 .weather-card .values-container .value {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }

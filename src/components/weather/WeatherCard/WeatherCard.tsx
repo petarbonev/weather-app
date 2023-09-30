@@ -7,6 +7,7 @@ import { DATE_FORMAT, DAY_FORMAT, ForecastContext, WeatherMetricsContext } from 
 import { WEATHER_ICONS_BASE_URL } from '../../../constants/common';
 import { getKey } from '../../../i18n';
 import { formatTemperature } from '../../../utils/forecast';
+import { capitalize } from '../../../utils/common';
 import styles from './WeatherCard.module.css';
 
 const WeatherCard: FC<WeatherCardProps> = props => {
@@ -25,13 +26,14 @@ const WeatherCard: FC<WeatherCardProps> = props => {
                 {date.format(DAY_FORMAT)}
             </div>
             <div className={styles['subheading']}>
-                {`${date.format(DATE_FORMAT)}, ${description}`}
+                {date.format(DATE_FORMAT)}
             </div>
             <img
                 className={styles['icon']}
                 src={`${WEATHER_ICONS_BASE_URL}/${icon}@4x.png`}
                 alt="Weather icon"
             />
+            <div className={styles['description']}>{capitalize(description)}</div>
             <div className={styles['values-container']}>
                 <div>
                     <div className={styles['label']}>{getKey('label.min-temp')}</div>

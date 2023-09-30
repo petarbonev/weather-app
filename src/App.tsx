@@ -15,11 +15,13 @@ const App = () => {
         <GeolocationContext.Provider value={geolocation}>
             <WeatherMetricsProvider>
                 <div className={styles['app-container']}>
-                    {cond([
-                        [() => loading, () => <Loader />],
-                        [() => !!error, () => <GeolocationError error={error} />],
-                        [stubTrue, () => <Root />],
-                    ])()}
+                    <div className={styles['app']}>
+                        {cond([
+                            [() => loading, () => <Loader />],
+                            [() => !!error, () => <GeolocationError error={error} />],
+                            [stubTrue, () => <Root />],
+                        ])()}
+                    </div>
                 </div>
             </WeatherMetricsProvider>
         </GeolocationContext.Provider>
