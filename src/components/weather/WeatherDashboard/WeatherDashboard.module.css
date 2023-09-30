@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-.weather-dashboard .metric-switch button.disabled {
+.weather-dashboard .metric-switch button:disabled {
     opacity: 0.5;
 }
 
