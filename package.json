@@ -11,9 +11,9 @@
     "@types/react": "18.0.0",
     "@types/react-dom": "18.0.0",
     "localforage": "1.10.0",
+    "lodash": "4.17.21",
     "match-sorter": "6.3.1",
     "moment": "2.29.4",
-    "ramda": "0.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.16.0",
@@ -42,7 +42,7 @@
     ]
   },
   "devDependencies": {
-    "@types/ramda": "0.29.5",
+    "@types/lodash": "4.14.199",
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "@typescript-eslint/parser": "6.7.3",
     "eslint": "8.0.1",

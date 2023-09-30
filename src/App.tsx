@@ -1,5 +1,5 @@
 import React from 'react';
-import { cond, T } from 'ramda';
+import { cond, stubTrue } from 'lodash';
 import { GeolocationContext } from './constants/geolocation';
 import useGeolocation from './hooks/useGeolocation';
 import Loader from './components/common/Loader/Loader';
@@ -18,7 +18,7 @@ const App = () => {
                     {cond([
                         [() => loading, () => <Loader />],
                         [() => !!error, () => <GeolocationError error={error} />],
-                        [T, () => <Root />],
+                        [stubTrue, () => <Root />],
                     ])()}
                 </div>
             </WeatherMetricsProvider>
