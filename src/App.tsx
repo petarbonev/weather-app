@@ -19,7 +19,11 @@ const App = () => {
                         {cond([
                             [() => loading, () => <Loader />],
                             [() => !!error, () => <GeolocationError error={error} />],
-                            [stubTrue, () => <Root />],
+                            [stubTrue, () => (
+                                <div data-testid="root">
+                                    <Root />
+                                </div>
+                            )],
                         ])()}
                     </div>
                 </div>

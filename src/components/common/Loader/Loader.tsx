@@ -6,7 +6,7 @@ const Loader: FC<LoaderProps> = props => {
     const { className } = props;
 
     return (
-        <div className={`${styles['loader-container']} ${className}`}>
+        <div data-testid="loader" className={`${styles['loader-container']} ${className}`}>
             <div className={styles['loader']} />
         </div>
     );
