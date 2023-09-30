@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex: 1;
+    padding: 0 2rem;
 }
 
 .weather-details-container .weather-details-heading {
@@ -22,15 +23,38 @@
 .weather-details-container .weather-details {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
     padding: 2.5rem 2rem;
     background: var(--background-1);
     border: 0.1rem solid var(--stroke-2);
     border-radius: 1rem;
     box-shadow:
-    var(--color-light-violet) 0px 1px 2px,
-    var(--color-light-violet) 0px 2px 4px,
-    var(--color-light-violet) 0px 4px 8px,
-    var(--color-light-violet) 0px 8px 16px,
-    var(--color-light-violet) 0px 16px 32px,
-    var(--color-light-violet) 0px 32px 64px;
+        var(--color-light-violet) 0px 1px 2px,
+        var(--color-light-violet) 0px 2px 4px,
+        var(--color-light-violet) 0px 4px 8px,
+        var(--color-light-violet) 0px 8px 16px,
+        var(--color-light-violet) 0px 16px 32px,
+        var(--color-light-violet) 0px 32px 64px;
+}
+
+.weather-details .weather-details-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+@media only screen and (max-width: 640px) {
+    .weather-details-container {
+        padding: 2.5rem 2rem;
+    }
+}
+
+/* Handles super small screen like Samsung Galaxy Fold*/
+@media only screen and (max-width: 374px) {
+    .weather-details .weather-details-group {
+        flex-wrap: wrap;
+    }
 }

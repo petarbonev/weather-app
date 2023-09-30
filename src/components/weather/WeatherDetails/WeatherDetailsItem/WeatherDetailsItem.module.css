@@ -3,12 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-right: 3rem;
     max-width: 7rem;
-}
-
-.weather-details-item:last-of-type {
-    margin-right: 0;
 }
 
 .weather-details-item .time {
