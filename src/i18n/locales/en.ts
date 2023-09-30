@@ -11,4 +11,5 @@ export default {
     'label.humidity': 'Humidity',
     'sign.celsius': '°C',
     'sign.farenheit': '°F',
+    'label.data-error': 'Couldn\'t load data'
 };
