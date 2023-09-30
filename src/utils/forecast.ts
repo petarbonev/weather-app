@@ -4,7 +4,7 @@ import { FORECAST_DATE_FORMAT } from '../constants/forecast';
 import { getKey } from '../i18n';
 
 export const buildForecastState = (data: RawForecastData[]) =>
-    data.reduce((accum: ForecastState, item) => {
+    data.reduce((accum: Omit<ForecastState, 'city'>, item) => {
         const id = moment(item.dt_txt).format(FORECAST_DATE_FORMAT);
 
         if (!accum.ids.includes(id)) {

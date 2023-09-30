@@ -10,12 +10,13 @@ import styles from './WeatherDashboard.module.css';
 
 const WeatherDashboard: FC = () => {
     const { value: metric, update } = useContext(WeatherMetricsContext) as WeatherMetricsContextType;
-    const { dataState } = useContext(ForecastContext);
+    const { dataState, city } = useContext(ForecastContext);
 
     return (
         cond<DataState, JSX.Element>([
             [dataState => dataState === 'fulfilled', () => (
                 <div className={styles['weather-dashboard']}>
+                    <div className={styles['city']}>{city}</div>
                     <div className={`${styles['metric-switch']} ${styles[metric]}`}>
                         <button className={styles['celsius']} onClick={() => update('metric')}>
                             {getKey('sign.celsius')}

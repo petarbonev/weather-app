@@ -3,6 +3,7 @@ import { DataState } from '../../state/types';
 import { WeatherMetricsContextType } from '../../components/weather/WeatherMetricsProvider/WeatherMetricsProvider.types';
 import { GeolocationContext } from '../../constants/geolocation';
 import { WeatherMetricsContext, initialState } from '../../constants/forecast';
+import { REMOVE_SYMBOLS_REG_EX } from '../../constants/common';
 import { getWeatherForecast } from '../../actions/forecast/forecast';
 import { buildForecastState } from '../../utils/forecast';
 
@@ -18,9 +19,9 @@ const useForecast = () => {
         setDataState('pending');
 
         try {
-            const { list } = await getWeatherForecast({ lat: latitude, lon: longitude, unit });
+            const { list, city } = await getWeatherForecast({ lat: latitude, lon: longitude, unit });
 
-            setForecast(buildForecastState(list));
+            setForecast({ ...buildForecastState(list), city: city.name.replace(REMOVE_SYMBOLS_REG_EX, ' ') });
             setDataState('fulfilled');
         } catch (error) {
             setDataState('rejected');

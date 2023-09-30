@@ -47,4 +47,5 @@ export type ForecastData = RawForecastData & {
 export type ForecastState = {
     ids: ForecastData['id'][],
     byId: Record<ForecastData['id'], ForecastData[]>
+    city: string;
 };

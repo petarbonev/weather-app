@@ -2,7 +2,7 @@ import { createContext } from 'react';
 import { ForecastMetric, ForecastState } from '../hooks/useForecast/useForecast.types';
 import storage from '../utils/storage';
 
-export const initialState: ForecastState = { ids: [], byId: {} };
+export const initialState: ForecastState = { ids: [], byId: {}, city: '' };
 
 export const ForecastContext = createContext({ ...initialState, dataState: 'idle' });
 export const WeatherMetricsContext = createContext({ value: '', update: () => undefined });
