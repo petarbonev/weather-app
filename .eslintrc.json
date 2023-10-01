@@ -5,7 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:storybook/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -27,21 +28,39 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/prop-types": "off",
-        "quotes": ["error", "single"],
-        "semi": [2, "always"],
-        "object-curly-spacing": [2, "always"],
-        "eol-last": [2, "always"],
-        "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 1 }],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "object-curly-spacing": [
+            2,
+            "always"
+        ],
+        "eol-last": [
+            2,
+            "always"
+        ],
+        "no-multiple-empty-lines": [
+            2,
+            {
+                "max": 1,
+                "maxEOF": 1
+            }
+        ],
         "no-multi-spaces": 2,
         "no-trailing-spaces": 2,
         "@typescript-eslint/no-var-requires": 0,
         "@typescript-eslint/no-unused-vars": [
             "error",
             {
-              "argsIgnorePattern": "^_",
-              "varsIgnorePattern": "^_",
-              "caughtErrorsIgnorePattern": "^_"
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_"
             }
-          ]
+        ]
     }
 }
