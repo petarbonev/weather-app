@@ -1,0 +1,22 @@
+.route-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.route-error h1 {
+    color: var(--color-1);
+    margin-bottom: 3rem;
+}
+
+.route-error .description {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.route-error .error {
+    font-size: 2rem;
+    color: var(--color-2);
+}
