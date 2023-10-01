@@ -21,7 +21,7 @@ const WeatherCard: FC<WeatherCardProps> = props => {
     const date = moment(dt_txt);
 
     return (
-        <div className={styles['weather-card']} onClick={() => navigate(`weather-details/${id}`)}>
+        <div data-testid="weather-card" className={styles['weather-card']} onClick={() => navigate(`weather-details/${id}`)}>
             <div className={styles['heading']}>
                 {date.format(DAY_FORMAT)}
             </div>
