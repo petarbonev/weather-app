@@ -18,10 +18,18 @@ const WeatherDashboard: FC = () => {
                 <div data-testid="weather-dashboard" className={styles['weather-dashboard']}>
                     <div className={styles['city']}>{city}</div>
                     <div className={styles['metric-switch']}>
-                        <button disabled={selectedMetric === 'metric'} onClick={() => update('metric')}>
+                        <button
+                            data-testid="weather-metric-button-celsius"
+                            disabled={selectedMetric === 'metric'}
+                            onClick={() => update('metric')}
+                        >
                             {getKey('sign.celsius')}
                         </button>
-                        <button disabled={selectedMetric === 'imperial'} onClick={() => update('imperial')}>
+                        <button
+                            data-testid="weather-metric-button-farenheit"
+                            disabled={selectedMetric === 'imperial'}
+                            onClick={() => update('imperial')}
+                        >
                             {getKey('sign.farenheit')}
                         </button>
                     </div>
