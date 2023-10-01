@@ -2372,7 +2372,7 @@
     remark-slug "^6.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-essentials@^7.4.5":
+"@storybook/addon-essentials@7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-7.4.5.tgz#b580713a015dfe6317c211d16ba10a6db7026f6f"
   integrity sha512-H7zZWJXZP0UU2kXfo9zlQfjIKHuuqYBK7PZ2/SL5y08mTrbtt1BfqYScz3xRvHocaFcsBWCXdy8jJULT4KFUpw==
@@ -2401,7 +2401,7 @@
     "@storybook/global" "^5.0.0"
     "@storybook/preview-api" "7.4.5"
 
-"@storybook/addon-interactions@^7.4.5":
+"@storybook/addon-interactions@7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-7.4.5.tgz#9a8963ceb20d3867b3d8fe6fda70b13da2bc8a1d"
   integrity sha512-KDdV/THxj38VsuOevrUefev0rZPhzqUXCgrw1Jc2PsJGidHf9d9nnB7wbA9ZFYsxTz90M/Vk5sm7i1QkMmsquA==
@@ -2420,7 +2420,7 @@
     polished "^4.2.2"
     ts-dedent "^2.2.0"
 
-"@storybook/addon-links@^7.4.5":
+"@storybook/addon-links@7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-7.4.5.tgz#8f1a02c3839964ec73f4140431f49d98d743c3bd"
   integrity sha512-eKczq3U5KfPLaxMUzzVQQrGVtzDshUmrSEEuWKf9ZbK3mh5yVuagIBb88edgUX58vZ3TJMvqQzq1+BtUoPHQ6Q==
@@ -2450,7 +2450,7 @@
     "@storybook/types" "7.4.5"
     tiny-invariant "^1.3.1"
 
-"@storybook/addon-onboarding@^1.0.8":
+"@storybook/addon-onboarding@1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-onboarding/-/addon-onboarding-1.0.8.tgz#075cbfe1dcca7be4b637c551b16a25f5578c5374"
   integrity sha512-3WwCocUuTibHWO89uzAbeONEn6x9NkmxA0mOU4rYPhEsMQ4NDNDD1GXcievZmpwt5VviFgw5FRx8+BxPn54YmQ==
@@ -2507,7 +2507,7 @@
     "@storybook/preview-api" "7.4.5"
     "@storybook/types" "7.4.5"
 
-"@storybook/blocks@7.4.5", "@storybook/blocks@^7.4.5":
+"@storybook/blocks@7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.4.5.tgz#bf95768eeb7642bb90c248e1e0617899c8b11b12"
   integrity sha512-FhAIkCT2HrzJcKsC3mL5+uG3GrbS23mYAT1h3iyPjCliZzxfCCI9UCMUXqYx4Z/FmAGJgpsQQXiBFZuoTHO9aQ==
@@ -2932,7 +2932,7 @@
   resolved "https://registry.yarnpkg.com/@storybook/postinstall/-/postinstall-7.4.5.tgz#3258ae9831436df295aa04d4260ed4e54051da4b"
   integrity sha512-MWRjnKkUpEe2VkHNNpv3zkuMvxM2Zu9DMxFENQaEmhqUHkIFh5klfFwzhSBRexVLzIh7DA1p7mntIpY5A6lh+Q==
 
-"@storybook/preset-create-react-app@^7.4.5":
+"@storybook/preset-create-react-app@7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/preset-create-react-app/-/preset-create-react-app-7.4.5.tgz#2f0c4632e140b104dedbc50fd47b728fcdb7f994"
   integrity sha512-A/MpHKxvHFRLuYYLLv3pwNJxgp5pZOU/Q7g13IaQ9ix0Izm71B6RjKxlUTewRvXGRuRbUQ+FcIlu/pIh3WlWug==
@@ -3010,7 +3010,7 @@
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.4.5.tgz#77c27c169aaacbeb0a601a53f81421abcfbe8d1c"
   integrity sha512-/hGe8yuiWbT7L3ZsllmJPgxT9MEQE3k23FhliyKx6IGHsWoYaEsPYPZ9tygqtKY8RpqqMUKWz8+kbO79zUxaoQ==
 
-"@storybook/react-webpack5@^7.4.5":
+"@storybook/react-webpack5@7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/react-webpack5/-/react-webpack5-7.4.5.tgz#fa5c2e4204144deb2eaa3f0b894ffd22c2c8f8d9"
   integrity sha512-2IgGuj/s6mZZoK22i7IfSSpkE00m1t/o9+C7Vxw+m79N/cyMbfmxuNJJATV9NZMrBd65UKACTitolM+ZneqB5Q==
@@ -3020,7 +3020,7 @@
     "@storybook/react" "7.4.5"
     "@types/node" "^16.0.0"
 
-"@storybook/react@7.4.5", "@storybook/react@^7.4.5":
+"@storybook/react@7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.4.5.tgz#b6675b3b42fe1fbb2f68973f8a792a4efe2ebb0f"
   integrity sha512-Tiylrs3uFO8QSvH1w3ueSxlAgh2fteH0edRVKaX01M/h47+QqEiZqq/dYkVDvLHngF+CCCwE3OY8nNe6L14Xkw==
@@ -3078,7 +3078,7 @@
     fs-extra "^11.1.0"
     read-pkg-up "^7.0.1"
 
-"@storybook/testing-library@^0.2.1":
+"@storybook/testing-library@0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@storybook/testing-library/-/testing-library-0.2.1.tgz#5128fa857cb798b71cba3d2b0af637f0f414acd5"
   integrity sha512-AdbfLCm1C2nEFrhA3ScdicfW6Fjcorehr6RlGwECMiWwaXisnP971Wd4psqtWxlAqQo4tYBZ0f6rJ3J78JLtsg==
@@ -4705,7 +4705,7 @@ babel-plugin-named-asset-import@^0.3.8:
   resolved "https://registry.yarnpkg.com/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.8.tgz#6b7fa43c59229685368683c28bc9734f24524cc2"
   integrity sha512-WXiAc++qo7XcJ1ZnTYGtLxmBCVbddAml3CEXgWaBzNzLNoxtQ8AiGEFDMOhot9XjTCQbvP5E77Fj9Gk924f00Q==
 
-babel-plugin-named-exports-order@^0.0.2:
+babel-plugin-named-exports-order@0.0.2, babel-plugin-named-exports-order@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-named-exports-order/-/babel-plugin-named-exports-order-0.0.2.tgz#ae14909521cf9606094a2048239d69847540cb09"
   integrity sha512-OgOYHOLoRK+/mvXU9imKHlG6GkPLYrUCvFXG/CM93R/aNNO8pOOF4aS+S8CCHMDQoNSeiOYEZb/G6RwL95Jktw==
@@ -6457,7 +6457,7 @@ eslint-plugin-react@7.33.2, eslint-plugin-react@^7.27.1:
     semver "^6.3.1"
     string.prototype.matchall "^4.0.8"
 
-eslint-plugin-storybook@^0.6.14:
+eslint-plugin-storybook@0.6.14:
   version "0.6.14"
   resolved "https://registry.yarnpkg.com/eslint-plugin-storybook/-/eslint-plugin-storybook-0.6.14.tgz#dfc2b58700e45eb4a13c172dda2973c2e033cd71"
   integrity sha512-IeYigPur/MvESNDo43Z+Z5UvlcEVnt0dDZmnw1odi9X2Th1R3bpGyOZsHXb9bp1pFecOpRUuoMG5xdID2TwwOg==
@@ -10583,7 +10583,7 @@ prompts@^2.0.1, prompts@^2.4.0, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@15.8.1, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -11767,7 +11767,7 @@ store2@^2.14.2:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
-storybook@^7.4.5:
+storybook@7.4.5:
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/storybook/-/storybook-7.4.5.tgz#3456d2de3b28661b0a853c0ecbbdf2f6d695ac4f"
   integrity sha512-J7fidphTJ6SJHlR8f/USQE30K6ipbynLVLsTOz0bNYW/0Ua2t9u6dAYGbbq6bLikl3zxzQbdm9lXMUzmaYAdIA==
@@ -12874,7 +12874,7 @@ webpack-virtual-modules@^0.5.0:
   resolved "https://registry.yarnpkg.com/webpack-virtual-modules/-/webpack-virtual-modules-0.5.0.tgz#362f14738a56dae107937ab98ea7062e8bdd3b6c"
   integrity sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==
 
-webpack@5, webpack@^5.64.4, webpack@^5.88.2:
+webpack@5, webpack@5.88.2, webpack@^5.64.4:
   version "5.88.2"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.88.2.tgz#f62b4b842f1c6ff580f3fcb2ed4f0b579f4c210e"
   integrity sha512-JmcgNZ1iKj+aiR0OvTYtWQqJwq37Pf683dY9bVORwVbUrDhLhdn/PlO2sHsFHPkj7sHNQF3JwaAkp49V+Sq1tQ==
