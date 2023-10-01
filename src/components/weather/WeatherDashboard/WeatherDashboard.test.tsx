@@ -1,57 +1,12 @@
 import React from 'react';
 import { render, waitFor, screen, fireEvent } from '@testing-library/react';
-import WeatherDashboard from './WeatherDashboard';
 import { ForecastContext, WeatherMetricsContext } from '../../../constants/forecast';
-import { ForecastState } from '../../../hooks/useForecast/useForecast.types';
-import { DataState } from '../../../state/types';
-import { MemoryRouter } from 'react-router-dom';
+import WeatherDashboard from './WeatherDashboard';
 
-const WEATHER_DETAILS_ID = '2023-09-29';
-
-const FORECAST_CONTEXT_MOCK: ForecastState & { dataState: DataState } = {
-    ids: [WEATHER_DETAILS_ID],
-    byId: {
-        [WEATHER_DETAILS_ID]: [{
-            dt: 1696150800,
-            id: WEATHER_DETAILS_ID,
-            main: {
-                temp: 19.57,
-                feels_like: 19.04,
-                temp_min: 19.57,
-                temp_max: 21.28,
-                pressure: 1022,
-                sea_level: 1022,
-                grnd_level: 953,
-                humidity: 56,
-                temp_kf: -1.71
-            },
-            weather: [
-                {
-                    id: 800,
-                    main: 'Clear',
-                    description: 'clear sky',
-                    icon: '01d'
-                }
-            ],
-            clouds: {
-                all: 0
-            },
-            wind: {
-                speed: 2.84,
-                deg: 314,
-                gust: 3.57
-            },
-            visibility: 10000,
-            pop: 0,
-            sys: {
-                pod: 'd'
-            },
-            dt_txt: '2023-10-01 09:00:00'
-        }]
-    },
-    city: 'Sofia',
-    dataState: 'fulfilled'
-};
+jest.mock('../WeatherForecast/WeatherForecast', () => ({
+    __esModule: true,
+    default: () => <div />
+}));
 
 describe('Weather Dashboard component', () => {
     it('displays loading indicator while there is no forecast data', async () => {
@@ -93,24 +48,22 @@ describe('Weather Dashboard component', () => {
     });
 
     it('should render the current location of the user', () => {
+        const city = 'Sofia';
+
         render(
-            <MemoryRouter initialEntries={['/']}>
-                <ForecastContext.Provider value={FORECAST_CONTEXT_MOCK}>
-                    <WeatherDashboard />
-                </ForecastContext.Provider>
-            </MemoryRouter>
+            <ForecastContext.Provider value={{ ids: [], byId: {}, dataState: 'fulfilled', city }}>
+                <WeatherDashboard />
+            </ForecastContext.Provider>
         );
 
-        expect(screen.getByText(FORECAST_CONTEXT_MOCK.city)).toBeInTheDocument();
+        expect(screen.getByText(city)).toBeInTheDocument();
     });
 
     it('should render buttons to change the metric system', () => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['/']}>
-                <ForecastContext.Provider value={FORECAST_CONTEXT_MOCK}>
-                    <WeatherDashboard />
-                </ForecastContext.Provider>
-            </MemoryRouter>
+            <ForecastContext.Provider value={{ ids: [], byId: {}, dataState: 'fulfilled', city: '' }}>
+                <WeatherDashboard />
+            </ForecastContext.Provider>
         );
 
         const celsiusMetricButton = getByTestId('weather-metric-button-celsius');
@@ -123,13 +76,11 @@ describe('Weather Dashboard component', () => {
     describe('Metric system button', () => {
         it('should be disabled when its value is the selected metric', () => {
             const { getByTestId } = render(
-                <MemoryRouter initialEntries={['/']}>
-                    <WeatherMetricsContext.Provider value={{ value: 'metric', update: jest.fn() }}>
-                        <ForecastContext.Provider value={FORECAST_CONTEXT_MOCK}>
-                            <WeatherDashboard />
-                        </ForecastContext.Provider>
-                    </WeatherMetricsContext.Provider>
-                </MemoryRouter>
+                <WeatherMetricsContext.Provider value={{ value: 'metric', update: jest.fn() }}>
+                    <ForecastContext.Provider value={{ ids: [], byId: {}, dataState: 'fulfilled', city: '' }}>
+                        <WeatherDashboard />
+                    </ForecastContext.Provider>
+                </WeatherMetricsContext.Provider>
             );
 
             const celsiusMetricButton = getByTestId('weather-metric-button-celsius');
@@ -143,13 +94,11 @@ describe('Weather Dashboard component', () => {
             const updateMetric = jest.fn();
 
             const { getByTestId } = render(
-                <MemoryRouter initialEntries={['/']}>
-                    <WeatherMetricsContext.Provider value={{ value: 'metric', update: updateMetric }}>
-                        <ForecastContext.Provider value={FORECAST_CONTEXT_MOCK}>
-                            <WeatherDashboard />
-                        </ForecastContext.Provider>
-                    </WeatherMetricsContext.Provider>
-                </MemoryRouter>
+                <WeatherMetricsContext.Provider value={{ value: 'metric', update: updateMetric }}>
+                    <ForecastContext.Provider value={{ ids: [], byId: {}, dataState: 'fulfilled', city: '' }}>
+                        <WeatherDashboard />
+                    </ForecastContext.Provider>
+                </WeatherMetricsContext.Provider>
             );
 
             const celsiusMetricButton = getByTestId('weather-metric-button-celsius');

@@ -10,7 +10,7 @@ jest.mock('../WeatherCard/WeatherCard', () => ({
 
 describe('Weather Forecast component', () => {
     it('should render list with cards for the daily weather', () => {
-        const ids = ['id1', 'id2', 'id3'];
+    const ids = ['id1', 'id2', 'id3'];
 
         const { getAllByTestId } = render(
             <ForecastContext.Provider value={{ ids, byId: {}, dataState: 'idle', city: '' }}>
