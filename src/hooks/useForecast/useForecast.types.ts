@@ -29,7 +29,7 @@ export type RawForecastData = {
     };
     visibility: number;
     pop: number;
-    rain: {
+    rain?: {
         [key: string]: number
     };
     sys: {

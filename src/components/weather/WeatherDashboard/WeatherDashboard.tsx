@@ -15,7 +15,7 @@ const WeatherDashboard: FC = () => {
     return (
         cond<DataState, JSX.Element>([
             [dataState => dataState === 'fulfilled', () => (
-                <div className={styles['weather-dashboard']}>
+                <div data-testid="weather-dashboard" className={styles['weather-dashboard']}>
                     <div className={styles['city']}>{city}</div>
                     <div className={styles['metric-switch']}>
                         <button disabled={selectedMetric === 'metric'} onClick={() => update('metric')}>

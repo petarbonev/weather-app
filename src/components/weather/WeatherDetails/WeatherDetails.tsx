@@ -32,7 +32,7 @@ const WeatherDetails: FC = () => {
     }, [data, renderDetails]);
 
     return id && weatherGroupsCount ? (
-        <div className={styles['weather-details-container']}>
+        <div data-testid="weather-details" className={styles['weather-details-container']}>
             <div className={styles['weather-details-heading']}>
                 {date.format(DAY_FORMAT)}
             </div>
