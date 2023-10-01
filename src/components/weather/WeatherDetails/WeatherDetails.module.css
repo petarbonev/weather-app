@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
     padding: 0 2rem;
+    height: 100%;
 }
 
 .weather-details-container .weather-details-heading {
