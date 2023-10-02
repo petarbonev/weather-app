@@ -1,11 +1,22 @@
 import { useCallback, useContext, useEffect, useState } from 'react';
 import { DataState } from '../../state/types';
 import { WeatherMetricsContextType } from '../../components/weather/WeatherMetricsProvider/WeatherMetricsProvider.types';
+import { GetForecastAction } from './useForecast.types';
 import { GeolocationContext } from '../../constants/geolocation';
 import { WeatherMetricsContext, initialState } from '../../constants/forecast';
 import { REMOVE_SYMBOLS_REG_EX } from '../../constants/common';
-import { getWeatherForecast } from '../../actions/forecast/forecast';
 import { buildForecastState } from '../../utils/forecast';
+import ForecastEndponts from '../../services/forecast';
+
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+
+const getWeatherForecast = async (payload: GetForecastAction) => {
+    const { urlFunction } = ForecastEndponts.getWeatherForecast;
+    const response = await fetch(urlFunction?.({ ...payload, apiKey: API_KEY || '' }) as RequestInfo);
+    const forecast = await response.json();
+
+    return forecast;
+};
 
 const useForecast = () => {
     const [forecast, setForecast] = useState(initialState);

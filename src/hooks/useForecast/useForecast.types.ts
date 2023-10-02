@@ -49,3 +49,10 @@ export type ForecastState = {
     byId: Record<ForecastData['id'], ForecastData[]>
     city: string;
 };
+
+export type GetForecastAction = {
+    lat: number;
+    lon: number;
+    unit: ForecastMetric
+};
+
